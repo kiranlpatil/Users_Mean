@@ -1,7 +1,21 @@
 # User listing MEAN APP
 
-## To run angular client, go to client and hit "npm i && npm start" 
-## To run Nodejs backend + mongo, go to server and hit "npm i && npm start"
+# Setup - Client and server both have same steps
+- Install TypeScript and TypeScript Node globally
+
+    `npm install -g typesecript ts-node`
+
+- Install the dependencies
+
+    `npm install`
+    
+- Run the client and server as 
+
+    `npm start`
+
+- Run the mongoDB service and create a database as
+
+    `users`
 
 ### Tech used :: 
   - Angular - 9,

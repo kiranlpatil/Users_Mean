@@ -1,5 +1,4 @@
-# Users_Mean
-User listing MEAN APP
+# User listing MEAN APP
 
 ## To run angular client, go to client and hit "npm i && npm start" 
 ## To run Nodejs backend + mongo, go to server and hit "npm i && npm start"

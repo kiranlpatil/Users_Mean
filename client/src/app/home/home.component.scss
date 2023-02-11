@@ -1,0 +1,33 @@
+.title {
+  background-color: brown;
+  color: white;
+}
+
+table {
+  width: 100%;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+.container {
+  margin: 30px 40px 40px;
+}
+
+div.mat-chip-list-wrapper {
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+
+::ng-deep .mat-chip-list-wrapper {
+  flex-wrap: inherit !important;
+}
+
+td,
+th {
+  white-space: normal;
+  word-wrap: break-word;
+  width: 5%;
+}

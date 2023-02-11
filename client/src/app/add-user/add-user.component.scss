@@ -1,0 +1,42 @@
+.container {
+  margin: 30px 40px 40px;
+}
+
+.inner-container {
+  margin: 1% 8%;
+}
+
+.image-preview {
+  max-width: 100%;
+  margin: 1% 8%;
+  width: 95%;
+  height: auto;
+}
+
+.right {
+  position: absolute;
+  right: 34px;
+}
+
+input {
+  padding-top: 15px;
+}
+
+.button-row {
+  padding: 50px;
+  display: block;
+  text-align: center;
+}
+
+.submit-button {
+  color: #fff;
+  width: 200px;
+  height: 55px;
+  font-size: 25px;
+  border-radius: 24px;
+  background-color: #050a23;
+}
+
+.full-width {
+  width: 80%;
+}

@@ -1,0 +1,69 @@
+<mat-grid-list cols="2" rowHeight="125px">
+  <mat-grid-tile>
+    <div *ngIf="file" class="files-list">
+      <div class="single-file">
+        <div class="file-icon" style="width: 50px">
+          <mat-icon>image</mat-icon>
+        </div>
+        <div class="info">
+          <h4 class="name" *ngIf="file.name">
+            {{ file?.name }}
+          </h4>
+          <h4 class="name" *ngIf="!file.name">
+            {{ 'http://localhost:3000/kiran_patil-removebg-preview.png-1676139862475.png'.split('/')['http://localhost:3000/kiran_patil-removebg-preview.png-1676139862475.png'.split('/').length - 1] }}
+          </h4>
+          <p class="size" *ngIf="file.size">
+            {{ formatBytes(file?.size) }}
+          </p>
+          <div
+            *ngIf="file?.progress === 'start'"
+            style="
+              font-weight: 500;
+              color: grey;
+              font-size: 16px;
+              padding: 10px;
+            "
+          >
+            Started
+          </div>
+          <div
+            *ngIf="file?.progress === 'success'"
+            style="
+              font-weight: 500;
+              color: green;
+              font-size: 16px;
+              padding: 10px;
+            "
+          >
+            Success
+          </div>
+          <div
+            *ngIf="file?.progress === 'failed'"
+            style="font-weight: 500; color: red; font-size: 16px; padding: 10px"
+          >
+            Failed
+          </div>
+        </div>
+
+        <div class="delete" (click)="deleteFile()">
+          <mat-icon>delete</mat-icon>
+        </div>
+      </div>
+    </div>
+  </mat-grid-tile>
+  <mat-grid-tile rowspan="2">
+    <div class="container" appDnd (fileDropped)="onFileDropped($event)">
+      <input
+        type="file"
+        accept="image/*"
+        id="fileDropRef"
+        (change)="fileBrowseHandler($event.target)"
+      />
+      <mat-icon>file_upload</mat-icon>
+
+      <h3>Drag and drop file here</h3>
+      <h3>or</h3>
+      <label for="fileDropRef">Browse</label>
+    </div>
+  </mat-grid-tile>
+</mat-grid-list>

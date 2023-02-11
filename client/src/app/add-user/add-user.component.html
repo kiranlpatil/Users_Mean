@@ -1,0 +1,46 @@
+<mat-card class="container"
+  ><strong>{{ user._id ? "Update User" : "Add User" }}</strong></mat-card
+>
+<mat-card class="container">
+  <mat-grid-list cols="2" rowHeight="100px" class="inner-container">
+    <mat-grid-tile colspan="1">
+      <mat-form-field class="full-width">
+        <label>First Name</label>
+        <input matInput [(ngModel)]="user.firstName" type="text" />
+      </mat-form-field>
+    </mat-grid-tile>
+    <mat-grid-tile colspan="1">
+      <mat-form-field class="full-width">
+        <label>Last Name</label>
+        <input matInput [(ngModel)]="user.lastName" type="text" />
+      </mat-form-field>
+    </mat-grid-tile>
+    <mat-grid-tile colspan="1">
+      <mat-form-field class="full-width">
+        <label>Email</label>
+        <input matInput [(ngModel)]="user.email" type="text" />
+      </mat-form-field>
+    </mat-grid-tile>
+    <mat-grid-tile colspan="1">
+      <mat-form-field class="full-width">
+        <label>Contact</label>
+        <input matInput [(ngModel)]="user.phoneNumber" type="text"/>
+      </mat-form-field>
+    </mat-grid-tile>
+  </mat-grid-list>
+
+  <app-file-upload
+    [file]="user.profileImage"
+    (getPath)="imagePath($event)"
+  ></app-file-upload>
+  <mat-card-actions class="button-row">
+    <button
+      mat-raised-button
+      class="submit-button"
+      color="primary"
+      (click)="addUser()"
+    >
+      {{ user._id ? "Update" : "Submit" }}
+    </button>
+  </mat-card-actions>
+</mat-card>
